@@ -15,6 +15,9 @@
 		94C25A48208F16F2003A3A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94C25A46208F16F2003A3A80 /* LaunchScreen.storyboard */; };
 		94C25A53208F16F3003A3A80 /* LiFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C25A52208F16F3003A3A80 /* LiFTests.swift */; };
 		94C25A5E208F16F3003A3A80 /* LiFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C25A5D208F16F3003A3A80 /* LiFUITests.swift */; };
+		94DA33E320A175F6002CB5E1 /* 4-AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA33E220A175F6002CB5E1 /* 4-AnswerViewController.swift */; };
+		94DA33E520A17A0E002CB5E1 /* joeshisha_summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94DA33E420A17A0E002CB5E1 /* joeshisha_summer.mp3 */; };
+		94DA33E720A17DC9002CB5E1 /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA33E620A17DC9002CB5E1 /* FlagQuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		94C25A59208F16F3003A3A80 /* LiFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C25A5D208F16F3003A3A80 /* LiFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiFUITests.swift; sourceTree = "<group>"; };
 		94C25A5F208F16F3003A3A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DA33E220A175F6002CB5E1 /* 4-AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4-AnswerViewController.swift"; sourceTree = "<group>"; };
+		94DA33E420A17A0E002CB5E1 /* joeshisha_summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = joeshisha_summer.mp3; sourceTree = SOURCE_ROOT; };
+		94DA33E620A17DC9002CB5E1 /* FlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		94C25A39208F16F2003A3A80 /* LiF */ = {
 			isa = PBXGroup;
 			children = (
+				94DA33E420A17A0E002CB5E1 /* joeshisha_summer.mp3 */,
 				94C25A3A208F16F2003A3A80 /* AppDelegate.swift */,
 				94C25A3C208F16F2003A3A80 /* ViewController.swift */,
 				94C25A3E208F16F2003A3A80 /* Main.storyboard */,
+				94DA33E620A17DC9002CB5E1 /* FlagQuizViewController.swift */,
+				94DA33E220A175F6002CB5E1 /* 4-AnswerViewController.swift */,
 				94C25A44208F16F2003A3A80 /* Assets.xcassets */,
 				94C25A46208F16F2003A3A80 /* LaunchScreen.storyboard */,
 				94C25A49208F16F3003A3A80 /* Info.plist */,
@@ -235,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DA33E520A17A0E002CB5E1 /* joeshisha_summer.mp3 in Resources */,
 				94C25A48208F16F2003A3A80 /* LaunchScreen.storyboard in Resources */,
 				94C25A45208F16F2003A3A80 /* Assets.xcassets in Resources */,
 				94C25A40208F16F2003A3A80 /* Main.storyboard in Resources */,
@@ -265,6 +275,8 @@
 				94C25A3D208F16F2003A3A80 /* ViewController.swift in Sources */,
 				94C25A43208F16F2003A3A80 /* LiF.xcdatamodeld in Sources */,
 				94C25A3B208F16F2003A3A80 /* AppDelegate.swift in Sources */,
+				94DA33E320A175F6002CB5E1 /* 4-AnswerViewController.swift in Sources */,
+				94DA33E720A17DC9002CB5E1 /* FlagQuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

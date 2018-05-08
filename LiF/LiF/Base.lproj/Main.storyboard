@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Palatino.ttc">
+            <string>Palatino-Roman</string>
+        </array>
         <array key="Verdana.ttf">
             <string>Verdana</string>
         </array>
@@ -40,6 +43,9 @@
                                 <state key="normal" title="4-Answer" backgroundImage="button">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zYe-d4-GCO" kind="show" id="IXa-WF-YsN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw0-3W-bcj">
                                 <rect key="frame" x="234" y="574" width="106" height="46"/>
@@ -51,6 +57,31 @@
                                 <state key="normal" title="Flag Quiz" backgroundImage="button">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="oMd-Qu-fFb" kind="show" id="4UE-x4-kHJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-Ri-y7s">
+                                <rect key="frame" x="316" y="21" width="43" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="d2s-lE-r08"/>
+                                    <constraint firstAttribute="height" constant="33" id="dXc-Zu-KTo"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="stop"/>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZX0-AQ-dAk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-lD-1wc">
+                                <rect key="frame" x="316" y="21" width="43" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="oKA-Cr-hjk"/>
+                                    <constraint firstAttribute="width" constant="43" id="uWH-Sq-cGA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play"/>
+                                <connections>
+                                    <action selector="playMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bo-9R-t9n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,49 +90,121 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rw0-3W-bcj" secondAttribute="trailing" constant="35" id="Hds-Yh-DRx"/>
                             <constraint firstItem="YDC-Ig-pDU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JlI-sk-ohD"/>
                             <constraint firstItem="vb0-XQ-Kc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="SP1-bN-T1V"/>
+                            <constraint firstItem="Jbf-Ri-y7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="ViV-9c-5RB"/>
                             <constraint firstItem="YDC-Ig-pDU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="eBL-Vb-1rV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jbf-Ri-y7s" secondAttribute="trailing" constant="16" id="i1Y-S8-Wuw"/>
+                            <constraint firstItem="ycf-lD-1wc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="llX-sD-hHR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vb0-XQ-Kc1" secondAttribute="bottom" constant="47" id="tHg-cB-SVe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ycf-lD-1wc" secondAttribute="trailing" constant="16" id="u4X-rm-ZBY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="Jbf-Ri-y7s" id="TfI-gE-dCc"/>
+                        <outlet property="playButton" destination="ycf-lD-1wc" id="jQr-bd-rQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="86.806596701649184"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer View Controller-->
         <scene sceneID="1z8-Va-Y4t">
             <objects>
-                <viewController id="zYe-d4-GCO" sceneMemberID="viewController">
+                <viewController id="zYe-d4-GCO" customClass="__AnswerViewController" customModule="LiF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWz-XJ-PEu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J4-l8-Img" userLabel="backButton">
+                                <rect key="frame" x="16" y="20" width="43" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="NrJ-m7-YNy"/>
+                                    <constraint firstAttribute="width" constant="43" id="PfG-iS-dnB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="NGG-al-CpA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4-Answer Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-Hz-97v">
+                                <rect key="frame" x="111" y="20" width="153" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="FU4-40-RUj"/>
+                                    <constraint firstAttribute="height" constant="36" id="uk6-TL-BCN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BOM-Hz-97v" firstAttribute="centerX" secondItem="Ycf-3A-5bs" secondAttribute="centerX" id="lwQ-Fy-8Q0"/>
+                            <constraint firstItem="BOM-Hz-97v" firstAttribute="top" secondItem="Ycf-3A-5bs" secondAttribute="top" id="mox-j7-kgF"/>
+                            <constraint firstItem="8J4-l8-Img" firstAttribute="top" secondItem="Ycf-3A-5bs" secondAttribute="top" id="tPN-tE-ncA"/>
+                            <constraint firstItem="8J4-l8-Img" firstAttribute="leading" secondItem="Ycf-3A-5bs" secondAttribute="leading" constant="16" id="vvA-Di-q16"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ycf-3A-5bs"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-I3-a9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="118"/>
+            <point key="canvasLocation" x="792.79999999999995" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Flag Quiz View Controller-->
         <scene sceneID="xAO-lI-FRg">
             <objects>
-                <viewController id="oMd-Qu-fFb" sceneMemberID="viewController">
+                <viewController id="oMd-Qu-fFb" customClass="FlagQuizViewController" customModule="LiF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UvY-kv-IBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-Ge-zel" userLabel="backButton">
+                                <rect key="frame" x="16" y="20" width="43" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="GgD-wW-4io"/>
+                                    <constraint firstAttribute="height" constant="33" id="PzG-5y-uLa"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="jyD-Wc-ltb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cky-RD-s0X">
+                                <rect key="frame" x="139" y="20" width="96" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IzY-a0-fcP"/>
+                                    <constraint firstAttribute="width" constant="96" id="gzI-ZN-QMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cky-RD-s0X" firstAttribute="centerX" secondItem="HJs-XQ-myx" secondAttribute="centerX" id="0Nh-eJ-sv7"/>
+                            <constraint firstItem="cky-RD-s0X" firstAttribute="top" secondItem="HJs-XQ-myx" secondAttribute="top" id="5YA-BU-xuZ"/>
+                            <constraint firstItem="2J1-Ge-zel" firstAttribute="top" secondItem="HJs-XQ-myx" secondAttribute="top" id="ZKL-ZC-SBf"/>
+                            <constraint firstItem="2J1-Ge-zel" firstAttribute="leading" secondItem="HJs-XQ-myx" secondAttribute="leading" constant="16" id="dXY-NV-eL2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HJs-XQ-myx"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7r-9a-dky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="795"/>
+            <point key="canvasLocation" x="792.79999999999995" y="794.75262368815595"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="600" height="600"/>
         <image name="button" width="600" height="361"/>
         <image name="logo" width="400" height="400"/>
+        <image name="play" width="601" height="601"/>
+        <image name="stop" width="600" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NGG-al-CpA"/>
+    </inferredMetricsTieBreakers>
 </document>
