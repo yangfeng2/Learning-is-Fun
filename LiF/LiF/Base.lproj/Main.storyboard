@@ -13,6 +13,9 @@
         <array key="Palatino.ttc">
             <string>Palatino-Roman</string>
         </array>
+        <array key="TimesNewRoman.ttf">
+            <string>TimesNewRomanPSMT</string>
+        </array>
         <array key="Verdana.ttf">
             <string>Verdana</string>
         </array>
@@ -137,6 +140,52 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-cm-HIW">
+                                <rect key="frame" x="51" y="221" width="273" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="blue"/>
+                                <connections>
+                                    <action selector="answerButtons:" destination="zYe-d4-GCO" eventType="touchUpInside" id="j90-tp-w7f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1R-8U-hM4">
+                                <rect key="frame" x="51" y="332" width="273" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="green"/>
+                                <connections>
+                                    <action selector="answerButtons:" destination="zYe-d4-GCO" eventType="touchUpInside" id="XxX-TU-YF8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXQ-XE-bib">
+                                <rect key="frame" x="51" y="433" width="273" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="pink"/>
+                                <connections>
+                                    <action selector="answerButtons:" destination="zYe-d4-GCO" eventType="touchUpInside" id="DN1-OM-0s3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-5o-tbK">
+                                <rect key="frame" x="51" y="526" width="273" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="yellow"/>
+                                <connections>
+                                    <action selector="answerButtons:" destination="zYe-d4-GCO" eventType="touchUpInside" id="Kwu-AL-Xdw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="med-A2-sAc">
+                                <rect key="frame" x="40" y="96" width="301" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFQ-kb-kbq">
+                                <rect key="frame" x="286" y="24" width="89" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,6 +196,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ycf-3A-5bs"/>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="med-A2-sAc" id="kfb-9O-yJ0"/>
+                        <outlet property="scoresLabel" destination="xFQ-kb-kbq" id="LSU-fN-jxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-I3-a9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,10 +252,14 @@
     </scenes>
     <resources>
         <image name="back" width="600" height="600"/>
+        <image name="blue" width="600" height="368"/>
         <image name="button" width="600" height="361"/>
+        <image name="green" width="600" height="368"/>
         <image name="logo" width="400" height="400"/>
+        <image name="pink" width="600" height="368"/>
         <image name="play" width="601" height="601"/>
         <image name="stop" width="600" height="600"/>
+        <image name="yellow" width="600" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NGG-al-CpA"/>
