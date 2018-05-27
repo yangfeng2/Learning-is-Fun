@@ -14,14 +14,20 @@ class __AnswerViewController: UIViewController {
     let questions =
     [
         "Which is the deepest ocean in the world ?",
-        "At how many degrees on a compass is south?"
+        "At how many degrees on a compass is south?",
+        "Name the largest freshwater lake in the world?",
+        "What is the world's longest river? ",
+        "What is the diameter of Earth? "
     ]
     
     //the answer of the questions
     let answers =
     [
         ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
-        ["180", "90", "270", "360"]
+        ["180", "90", "270", "360"],
+        ["Lake Superior", "Lake Malawi","Lake Huron","Lake Michigan"],
+        ["Amazon", "Yellow River", "Yangtze", "Nile"],
+        ["8000 miles", "7500 miles", "9100 miles", "7000 miles"]
     ]
     
     //variables
@@ -41,21 +47,20 @@ class __AnswerViewController: UIViewController {
         
         if (sender.tag == Int(rightAnswer))
         {
-            scores += 1
-            scoresLabel.text = "Score: \(Int(scores))"
+            if (currentQuestion == questions.count)
+            {
+                createMessage(titleText: "Congratulations ! ", messageText: "You have finished all question !")
+            }
+            else
+            {
+                nextQuestion()
+                scores += 1
+                scoresLabel.text = "Score: \(Int(scores))"
+            }
         }
         else
         {
-            print("wrong")
-        }
-        
-        if (currentQuestion != questions.count)
-        {
-            nextQuestion()
-        }
-        else
-        {
-            //show score
+            createMessage(titleText: "Wrong Answer !", messageText: "Please try again. ")
         }
     }
     
@@ -81,7 +86,7 @@ class __AnswerViewController: UIViewController {
             else
             {
                 button.setTitle(answers[currentQuestion][x], for: .normal)
-                x = 2
+                x = x + 1;
             }
         }
         currentQuestion += 1
@@ -89,11 +94,19 @@ class __AnswerViewController: UIViewController {
     }
     
     
-    
+    func createMessage(titleText: String , messageText: String)
+    {
+        let message = UIAlertController(title: titleText, message: messageText, preferredStyle: .alert)
+        
+        message.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+            message.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(message, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
 

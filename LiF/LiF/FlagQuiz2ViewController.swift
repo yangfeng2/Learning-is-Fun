@@ -1,15 +1,15 @@
 //
-//  FlagQuizViewController.swift
+//  FlagQuiz2ViewController.swift
 //  LiF
 //
-//  Created by YANG FENG LI on 8/5/18.
+//  Created by stevenseoh sin yong on 28/05/2018.
 //  Copyright © 2018 YANG FENG LI. All rights reserved.
 //
 
 import UIKit
 
-class FlagQuizViewController: UIViewController {
-    
+class FlagQuiz2ViewController: UIViewController {
+
     @IBAction func wrong1(_ sender: UIButton) {
         createMessage(titleText: "Wrong Answer !", messageText: "Please try again. ")
     }
@@ -30,17 +30,6 @@ class FlagQuizViewController: UIViewController {
         }))
         
         self.present(message, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
